@@ -1,4 +1,4 @@
-﻿const signals = [
+const signals = [
   {
     type: "good",
     icon: "✓",
@@ -39,7 +39,7 @@ const pricing = [
   },
   {
     name: "Premium",
-    price: "$7.99",
+    price: "$6.99",
     note: "For individuals",
     items: [
       "Full SaaS trust analysis",
