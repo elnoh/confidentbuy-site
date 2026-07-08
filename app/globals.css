@@ -1,0 +1,790 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: #02070b;
+  color: #ffffff;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+.page {
+  position: relative;
+  min-height: 100vh;
+  padding: 34px 72px 36px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 17% 19%, rgba(77, 215, 75, 0.09), transparent 25%),
+    radial-gradient(circle at 83% 15%, rgba(38, 200, 69, 0.18), transparent 24%),
+    radial-gradient(circle at 52% 60%, rgba(22, 75, 85, 0.12), transparent 35%),
+    linear-gradient(135deg, #02070b 0%, #071018 45%, #02070b 100%);
+}
+
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.014) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: radial-gradient(circle at center, black 20%, transparent 80%);
+}
+
+.backgroundGlow {
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+  filter: blur(34px);
+}
+
+.backgroundGlowOne {
+  width: 280px;
+  height: 280px;
+  top: -70px;
+  right: 180px;
+  background: rgba(53, 210, 68, 0.19);
+}
+
+.backgroundGlowTwo {
+  width: 340px;
+  height: 340px;
+  left: -160px;
+  bottom: 180px;
+  background: rgba(38, 117, 134, 0.18);
+}
+
+.siteHeader {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 330px 1fr 230px;
+  align-items: start;
+  min-height: 138px;
+}
+
+.adamBrand {
+  position: relative;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  column-gap: 25px;
+  align-items: start;
+}
+
+.arLogo {
+  grid-row: span 2;
+  font-size: 74px;
+  line-height: 0.82;
+  letter-spacing: -10px;
+  font-weight: 950;
+  color: #f7f7f7;
+  text-shadow:
+    0 3px 0 rgba(255, 255, 255, 0.25),
+    0 17px 32px rgba(0, 0, 0, 0.62);
+}
+
+.adamName {
+  position: absolute;
+  left: 2px;
+  top: 82px;
+  font-weight: 850;
+  font-size: 18px;
+  letter-spacing: -0.5px;
+}
+
+.adamName span {
+  font-size: 10px;
+  margin-left: 2px;
+  vertical-align: super;
+}
+
+.adamText {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  line-height: 1.24;
+  color: #fff;
+}
+
+.adamText strong {
+  font-size: 28px;
+  letter-spacing: 0.5px;
+}
+
+.centerHeader {
+  text-align: center;
+  justify-self: center;
+  transform: translateX(-20px);
+}
+
+.confidentBuyLogo {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  font-size: clamp(56px, 4.55vw, 82px);
+  line-height: 0.9;
+  font-weight: 950;
+  letter-spacing: -6.5px;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.72));
+  text-rendering: geometricPrecision;
+}
+
+.confidentPart {
+  color: #f4f7fa;
+  text-shadow:
+    0 2px 0 rgba(255, 255, 255, 0.42),
+    0 10px 16px rgba(0, 0, 0, 0.45);
+}
+
+.buyPart {
+  margin-left: 4px;
+  color: #35c74b;
+  text-shadow:
+    0 2px 0 rgba(133, 255, 133, 0.22),
+    0 12px 20px rgba(42, 206, 60, 0.22);
+}
+
+.navLinks {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  width: clamp(500px, 31vw, 560px);
+  gap: 47px;
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.navLinks a {
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.navLinks a:hover {
+  color: #57f15b;
+  text-shadow: 0 0 18px rgba(87, 241, 91, 0.35);
+}
+
+.developmentBadge {
+  justify-self: end;
+  margin-top: 6px;
+  width: 212px;
+  height: 74px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  background: linear-gradient(135deg, #6be651, #32b73d);
+  color: #fff;
+  font-weight: 950;
+  letter-spacing: 0.8px;
+  font-size: 17px;
+  box-shadow:
+    0 16px 40px rgba(50, 205, 62, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+.heroSection {
+  position: relative;
+  z-index: 1;
+  max-width: 1510px;
+  margin: 3px auto 0;
+  display: grid;
+  grid-template-columns: 520px 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.heroCopy {
+  padding-top: 3px;
+}
+
+.tinyPill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 185px;
+  height: 37px;
+  border: 1px solid #34df43;
+  border-radius: 999px;
+  color: #55ff55;
+  background: rgba(14, 72, 28, 0.16);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.heroCopy h1 {
+  margin: 0 0 17px;
+  font-size: clamp(49px, 3.5vw, 72px);
+  line-height: 1.02;
+  letter-spacing: -3.5px;
+  font-weight: 950;
+  color: #f7f7f7;
+  text-shadow:
+    0 3px 0 rgba(255, 255, 255, 0.16),
+    0 18px 30px rgba(0, 0, 0, 0.6);
+}
+
+.heroCopy h1 span {
+  color: #36c84c;
+  text-shadow: 0 13px 25px rgba(44, 213, 65, 0.18);
+}
+
+.lead,
+.bodyText {
+  max-width: 545px;
+  color: rgba(255, 255, 255, 0.93);
+  font-size: 19px;
+  line-height: 1.48;
+  margin: 0 0 20px;
+}
+
+.bodyText {
+  margin-bottom: 24px;
+}
+
+.heroActions {
+  display: flex;
+  gap: 21px;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.primaryButton,
+.videoButton {
+  height: 70px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #fff;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.primaryButton:hover,
+.videoButton:hover {
+  transform: translateY(-1px);
+}
+
+.primaryButton {
+  min-width: 205px;
+  padding: 0 24px;
+  gap: 14px;
+  border-color: rgba(95, 255, 94, 0.25);
+  background: linear-gradient(135deg, #69e85a, #2fc847);
+  box-shadow: 0 18px 36px rgba(42, 204, 64, 0.22);
+  font-weight: 900;
+}
+
+.primaryButton small,
+.videoButton small {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  opacity: 0.92;
+}
+
+.chromeDot {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #1a73e8;
+  background:
+    radial-gradient(circle at 50% 50%, #1a73e8 0 22%, #fff 23% 35%, transparent 36%),
+    conic-gradient(#fbbc05 0 33%, #34a853 0 66%, #ea4335 0);
+  font-size: 0;
+}
+
+.videoButton {
+  min-width: 228px;
+  gap: 13px;
+  padding: 0 23px;
+  background:
+    linear-gradient(135deg, rgba(35, 46, 56, 0.88), rgba(16, 25, 33, 0.88));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  font-weight: 900;
+}
+
+.playIcon {
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+  padding-left: 3px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.featureStrip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 19px;
+  max-width: 560px;
+}
+
+.featureStrip div {
+  display: grid;
+  grid-template-columns: 23px 1fr;
+  column-gap: 10px;
+  align-items: start;
+}
+
+.featureStrip strong {
+  font-size: 13px;
+  line-height: 1.1;
+}
+
+.featureStrip small {
+  grid-column: 2;
+  margin-top: 3px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 11px;
+  line-height: 1.15;
+}
+
+.featureIcon {
+  color: #4cff54;
+  font-size: 24px;
+  line-height: 0.8;
+}
+
+.featureIcon.muted {
+  color: rgba(157, 191, 195, 0.92);
+}
+
+.dashboardPreview {
+  border: 1px solid rgba(200, 222, 232, 0.19);
+  border-radius: 12px;
+  min-height: 540px;
+  padding: 29px 31px 40px;
+  background:
+    linear-gradient(135deg, rgba(18, 30, 39, 0.74), rgba(5, 11, 16, 0.77)),
+    radial-gradient(circle at 30% 40%, rgba(91, 255, 91, 0.08), transparent 40%);
+  box-shadow:
+    0 34px 80px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+}
+
+.windowChrome {
+  display: grid;
+  grid-template-columns: 170px 1fr 80px;
+  align-items: center;
+  margin-bottom: 31px;
+}
+
+.trafficDots {
+  display: flex;
+  gap: 12px;
+}
+
+.dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+}
+
+.dot.red {
+  background: #ff4f56;
+}
+
+.dot.yellow {
+  background: #ffd129;
+}
+
+.dot.green {
+  background: #45cf5c;
+}
+
+.searchBox {
+  justify-self: center;
+  width: 420px;
+  height: 41px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  padding-left: 19px;
+  color: rgba(210, 222, 232, 0.73);
+  background: linear-gradient(135deg, rgba(45, 57, 68, 0.72), rgba(29, 39, 47, 0.85));
+  font-size: 14px;
+}
+
+.commentIcon {
+  justify-self: end;
+  color: rgba(230, 240, 246, 0.93);
+  font-size: 23px;
+  transform: rotate(180deg);
+}
+
+.commentIcon sup {
+  font-size: 11px;
+  top: -0.7em;
+  position: relative;
+  transform: rotate(180deg);
+  display: inline-block;
+}
+
+.dashboardPreview h2 {
+  margin: 0 0 17px;
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+}
+
+.signalGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 31px;
+}
+
+.signalCard {
+  min-height: 407px;
+  border-radius: 12px;
+  padding: 22px 28px 25px;
+  text-align: center;
+  background: rgba(7, 14, 19, 0.34);
+  border: 1px solid currentColor;
+}
+
+.signalCard.good {
+  color: #4ee858;
+}
+
+.signalCard.attention {
+  color: #ffc400;
+}
+
+.signalCard.careful {
+  color: #ff453e;
+}
+
+.signalIcon {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  margin: 0 auto 13px;
+  display: grid;
+  place-items: center;
+  font-size: 38px;
+  font-weight: 950;
+  color: #0c1710;
+  background: currentColor;
+  box-shadow: 0 18px 30px color-mix(in srgb, currentColor 20%, transparent);
+}
+
+.signalCard.careful .signalIcon {
+  color: #111;
+  font-size: 34px;
+  border-radius: 16px;
+  transform: rotate(0deg);
+}
+
+.signalCard h3 {
+  margin: 0 0 17px;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 950;
+}
+
+.signalCard p {
+  min-height: 45px;
+  margin: 0 auto 18px;
+  max-width: 170px;
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.signalCard ul,
+.priceCard ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.signalCard li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.45;
+  margin: 0 0 12px;
+}
+
+.signalCard li span {
+  color: currentColor;
+  font-weight: 950;
+}
+
+.signalCard button {
+  width: 149px;
+  height: 39px;
+  margin-top: 17px;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  color: currentColor;
+  background: rgba(0, 0, 0, 0.12);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.pricingSection {
+  position: relative;
+  z-index: 2;
+  margin: 41px auto 0;
+  text-align: center;
+}
+
+.pricingSection h2 {
+  margin: 0 0 8px;
+  font-size: 31px;
+  line-height: 1.1;
+  letter-spacing: -0.7px;
+}
+
+.pricingSection > p {
+  margin: 0 0 18px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 17px;
+}
+
+.pricingGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 383px);
+  justify-content: center;
+  gap: 30px;
+}
+
+.priceCard {
+  text-align: left;
+  min-height: 326px;
+  padding: 24px 28px 25px;
+  border-radius: 13px;
+  border: 1px solid rgba(200, 222, 232, 0.2);
+  background:
+    linear-gradient(135deg, rgba(23, 34, 45, 0.65), rgba(5, 12, 17, 0.7));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.priceCard h3 {
+  margin: 0 0 9px;
+  color: #45df55;
+  font-size: 24px;
+}
+
+.priceLine {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  margin-bottom: 12px;
+}
+
+.priceLine strong {
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.priceLine span {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.priceNote {
+  margin: 0 0 15px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.priceCard li {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.priceCard li span {
+  color: #4fff56;
+  font-weight: 950;
+}
+
+.priceCard button {
+  width: 100%;
+  height: 47px;
+  margin-top: 25px;
+  border-radius: 7px;
+  border: 1px solid #42dc4f;
+  background: rgba(18, 30, 39, 0.46);
+  color: #52f75a;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.cancelNote {
+  margin-top: 24px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 15px;
+}
+
+@media (max-width: 1300px) {
+  .page {
+    padding: 28px 34px;
+  }
+
+  .siteHeader {
+    grid-template-columns: 280px 1fr 190px;
+  }
+
+  .developmentBadge {
+    width: 180px;
+  }
+
+  .heroSection {
+    grid-template-columns: 1fr;
+  }
+
+  .heroCopy {
+    max-width: 660px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .lead,
+  .bodyText,
+  .featureStrip {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .heroActions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 820px) {
+  .siteHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .adamBrand,
+  .developmentBadge {
+    align-self: center;
+  }
+
+  .centerHeader {
+    transform: none;
+  }
+
+  .confidentBuyLogo {
+    font-size: clamp(46px, 13vw, 68px);
+    letter-spacing: -4px;
+  }
+
+  .navLinks {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .heroActions,
+  .featureStrip,
+  .signalGrid,
+  .pricingGrid {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .dashboardPreview {
+    padding: 20px;
+  }
+
+  .windowChrome {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .searchBox {
+    width: 100%;
+  }
+
+  .pricingGrid {
+    display: grid;
+    width: 100%;
+  }
+
+  .priceCard {
+    width: 100%;
+  }
+}
+
+/* ===== ConfidentBuy top title refinement ===== */
+.centerHeader {
+  width: clamp(520px, 39vw, 680px);
+  text-align: center;
+  justify-self: center;
+  transform: translateX(-20px);
+}
+
+.confidentBuyLogo {
+  width: 100%;
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  font-size: clamp(64px, 5.15vw, 94px);
+  line-height: 0.9;
+  font-weight: 950;
+  letter-spacing: -2.2px;
+}
+
+.buyPart {
+  margin-left: 9px;
+}
+
+.navLinks {
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  gap: 0;
+  font-size: 17px;
+}
+
+/* ===== Top navigation spacing only ===== */
+.navLinks {
+  width: clamp(390px, 28vw, 500px);
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  gap: 0;
+}
