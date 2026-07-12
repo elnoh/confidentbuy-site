@@ -90,29 +90,10 @@ button {
 
 .arLogo {
   grid-row: span 2;
-  font-size: 74px;
-  line-height: 0.82;
-  letter-spacing: -10px;
-  font-weight: 950;
-  color: #f7f7f7;
-  text-shadow:
-    0 3px 0 rgba(255, 255, 255, 0.25),
-    0 17px 32px rgba(0, 0, 0, 0.62);
-}
-
-.adamName {
-  position: absolute;
-  left: 2px;
-  top: 82px;
-  font-weight: 850;
-  font-size: 18px;
-  letter-spacing: -0.5px;
-}
-
-.adamName span {
-  font-size: 10px;
-  margin-left: 2px;
-  vertical-align: super;
+  width: 120px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .adamText {
@@ -653,6 +634,31 @@ button {
   margin-top: 24px;
   color: rgba(255, 255, 255, 0.88);
   font-size: 15px;
+}
+
+.siteFooter {
+  position: relative;
+  z-index: 2;
+  margin: 38px auto 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.siteFooter address {
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+}
+
+.siteFooter strong {
+  color: #fff;
+}
+
+.siteFooter sup {
+  font-size: 0.7em;
+  line-height: 0;
 }
 
 @media (max-width: 1300px) {

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const signals = [
   {
     type: "good",
@@ -59,10 +61,14 @@ export default function Home() {
 
       <header className="siteHeader">
         <div className="adamBrand">
-          <div className="arLogo">AR</div>
-          <div className="adamName">
-            AdamRemix<span>™</span>
-          </div>
+          <Image
+            className="arLogo"
+            src="/AR_Logo.png"
+            width={614}
+            height={542}
+            alt="AdamRemix™"
+            priority
+          />
           <div className="adamText">
             <strong>SOFTWARE,</strong>
             <span>Beyond the Limits</span>
@@ -219,6 +225,16 @@ export default function Home() {
 
         <div className="cancelNote">▣ Cancel anytime. No hidden fees.</div>
       </section>
+
+      <footer className="siteFooter">
+        <address>
+          <strong>ELAMBROS LLC</strong>
+          <span>
+            234 5<sup>th</sup> Avenue, 2<sup>nd</sup> Floor
+          </span>
+          <span>New York, NY 10001</span>
+        </address>
+      </footer>
     </main>
   );
 }
