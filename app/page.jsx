@@ -112,8 +112,7 @@ export default function Home() {
           </p>
 
           <p className="bodyText">
-            SaaS (Software as a Service) is software you use online, without
-            installing anything. You subscribe, access it from anywhere, and we
+            SaaS (Software as a Service) is software you use online. You subscribe, access it from anywhere, and we
             help you know if it’s safe and worth it.
           </p>
 
@@ -233,6 +232,9 @@ export default function Home() {
             234 5<sup>th</sup> Avenue, 2<sup>nd</sup> Floor
           </span>
           <span>New York, NY 10001</span>
+          <span>
+              <a href="mailto:confidentbuy@adamremix.com?subject=ConfidentBuy%20Inquiry">confidentbuy@adamremix.com</a>
+          </span>
         </address>
       </footer>
     </main>
