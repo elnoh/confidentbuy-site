@@ -60,19 +60,19 @@ export default function Home() {
       <div className="backgroundGlow backgroundGlowTwo" />
 
      <header className="siteHeader">
-  <div className="adamBrand">
-    <a
-      href="https://adamremix.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Visit AdamRemix"
-    >
-          <div className="adamText">
-            <strong>SOFTWARE,</strong>
-            <span>Beyond the Limits</span>
-          </div>
-        </a>
-        </div>
+<div className="adamBrand">
+  <a
+    href="https://adamremix.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Visit AdamRemix"
+  >
+    <div className="adamText">
+      <strong>SOFTWARE,</strong>
+      <span>Beyond the Limits</span>
+    </div>
+  </a>
+</div>
 
         <div className="centerHeader">
           <div className="confidentBuyLogo">
