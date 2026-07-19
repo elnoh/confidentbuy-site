@@ -59,20 +59,19 @@ export default function Home() {
       <div className="backgroundGlow backgroundGlowOne" />
       <div className="backgroundGlow backgroundGlowTwo" />
 
-      <header className="siteHeader">
-        <div className="adamBrand">
-          <Image
-            className="arLogo"
-            src="/AR_Logo.png"
-            width={614}
-            height={542}
-            alt="AdamRemix™"
-            priority
-          />
+     <header className="siteHeader">
+  <div className="adamBrand">
+    <a
+      href="https://adamremix.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Visit AdamRemix"
+    >
           <div className="adamText">
             <strong>SOFTWARE,</strong>
             <span>Beyond the Limits</span>
           </div>
+        </a>
         </div>
 
         <div className="centerHeader">
